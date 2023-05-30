@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Animals</h1>
+
+<div id="animals">
+  <% @animals.each do |animal| %>
+    <%= render animal %>
+    <p>
+      <%= link_to "Show this animal", animal %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New animal", new_animal_path %>
+<br>
+
+<%= link_to "Sign in", new_user_session_path %>
+<%= link_to "Sign up", new_user_registration_path %>
+<%= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete %>
+<br>
+<%= link_to "Contact us", "/contact"%>
